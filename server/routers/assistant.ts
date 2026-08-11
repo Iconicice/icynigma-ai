@@ -40,7 +40,7 @@ Voloco creator profile: https://voloco.resonantcavity.com/applinks/creator?id=25
 - Instagram: @ino.m — https://www.instagram.com/ino.m
 - X: @InoM — https://x.com/InoM
 - YouTube: Iconic Media Entertainment — https://www.youtube.com/@IconicMediaEntertainment
-- SoundCloud: Iconic Media Entertainment — https://soundcloud.com/iconic-media-entertainment
+- SoundCloud: Iconic Media Entertainment — https://soundcloud.com/iconic-records-325509286
 - Beatstars: Iconic Media Entertainment — https://www.beatstars.com/iconicmediaentertainment
 - Voloco: Icynigma_ime
 - StarMaker: Icynigma / Icynigma_Covers

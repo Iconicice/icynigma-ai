@@ -168,6 +168,15 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom", "wouter"],
+          motion: ["framer-motion"],
+          icons: ["lucide-react", "react-icons/si"],
+        },
+      },
+    },
   },
   server: {
     host: true,

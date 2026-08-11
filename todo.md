@@ -17,3 +17,9 @@
 - [x] Resolve the Navigation and Services motion type errors and confirm a clean TypeScript check.
 - [x] Restore the complete original global style-token system from the supplied source and validate its dark-mode fidelity.
 - [x] Verify the AudioGuide and `/video` route within a clean production build before final delivery.
+- [x] Verify the user-confirmed original logo asset is the canonical managed logo reference in every branded site location.
+- [x] Verify the original centre-logo dance, glow, teleport, and twelve-second return cycle in the rebuilt navigation.
+- [x] Audit every site control, anchor, route, external destination, media reference, and assistant flow for reliable behavior.
+- [x] Add automated coverage for original navigation anchors, beat and social links, floating controls, and managed media paths.
+- [x] Diagnose and resolve runtime, browser-console, network, build, and interaction issues found during the optimization pass.
+- [x] Validate production performance and responsive visual behavior after fixes.
