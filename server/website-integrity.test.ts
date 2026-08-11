@@ -11,7 +11,7 @@ describe("website interaction and link integrity", () => {
     for (const timing of ["7000", "7600", "9500", "10000", "12000"]) expect(navigation).toContain(timing);
     expect(navigation).toContain("siteAssets.logo");
     expect(navigation).toContain("startLogin");
-    expect(navigation).toContain("/icynigma-ai");
+    expect(navigation).toContain("/nova");
   });
 
   it("keeps all original beat purchase and social destinations", () => {
