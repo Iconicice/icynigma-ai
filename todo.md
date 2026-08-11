@@ -32,5 +32,6 @@
 - [x] Remove the IME TrustPass login redirect and restore the original site login behavior.
 - [x] Add a dedicated Icynigma AI page that directs visitors to the supplied general-purpose chatbot for open-ended questions.
 - [x] Replace the external Icynigma.ai handoff with a new independent, site-owned general-purpose chatbot and dedicated page.
+- [x] Remove only the NOVA chatbot page, navigation, server stream, and automated test while retaining all other current website changes.
 - [x] Browser push notifications were intentionally removed at the user’s request; no visitor subscription, delivery, or notification configuration is present.
 - [x] VAPID keys, subscriber data storage, service-worker, and owner notification-publishing work were intentionally removed at the user’s request.
