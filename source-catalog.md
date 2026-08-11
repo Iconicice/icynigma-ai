@@ -1,6 +1,6 @@
 # Supplied Source Catalogue
 
-This catalogue records the original website package used as the authoritative rebuild source. The source application is a dark-themed Ice Media Entertainment website with a public home route and a dedicated video route. Its original section order is Navigation, Hero, Services, Beats, About, Connect, and Footer, followed by the floating AudioGuide and assistant interfaces.
+This catalogue records the original website package used as the authoritative rebuild source. The source application is a dark-themed Iconic Media Entertainment website with a public home route and a dedicated video route. Its original section order is Navigation, Hero, Services, Beats, About, Connect, and Footer, followed by the floating AudioGuide and assistant interfaces.
 
 ## Routes and application shell
 
