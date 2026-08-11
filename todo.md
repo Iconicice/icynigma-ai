@@ -25,10 +25,12 @@
 - [x] Validate production performance and responsive visual behavior after fixes.
 - [x] Verify the deployed production domain, core routes, asset delivery, and assistant endpoint health.
 - [ ] Retry GitHub Pages enablement and workflow publication using the available autonomous account access.
+- [x] Push the completed Iconic Media Entertainment source, including the Icynigma AI page, to https://github.com/Iconicice/icynigma-ai.
 - [x] Replace every website, metadata, assistant, video, documentation, test, and deployment-facing occurrence of “Ice Media Entertainment” with “Iconic Media Entertainment”.
 - [x] Update the landing-page hero to read “Welcome to Iconic Media Entertainment” exactly.
 - [x] Integrate IME TrustPass as the default login entry point with a secure return path to this site.
 - [x] Remove the IME TrustPass login redirect and restore the original site login behavior.
 - [x] Add a dedicated Icynigma AI page that directs visitors to the supplied general-purpose chatbot for open-ended questions.
+- [x] Replace the external Icynigma.ai handoff with a new independent, site-owned general-purpose chatbot and dedicated page.
 - [x] Browser push notifications were intentionally removed at the user’s request; no visitor subscription, delivery, or notification configuration is present.
 - [x] VAPID keys, subscriber data storage, service-worker, and owner notification-publishing work were intentionally removed at the user’s request.
