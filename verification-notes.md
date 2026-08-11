@@ -19,7 +19,3 @@ The live FAQ action `How do I buy a beat?` returned a streamed 200 Server-Sent E
 The public deployment at `https://icemediaent-kbysc8ud.manus.space` loaded the full Iconic Media Entertainment homepage successfully. The production page served the original managed logo, complete section sequence, Voloco and social controls, creator attribution, AudioGuide trigger, and Icynigma.ai trigger. Opening the assistant on the production domain displayed the branded panel, online state, welcome message, FAQ chips, and message input, confirming the deployed interactive shell is healthy.
 
 The updated site was inspected in the live browser after the rename. Its hero reads “Welcome to Iconic Media Entertainment” exactly, its document title is Iconic Media Entertainment, and the unauthenticated desktop navigation exposes the new “Log in with IME TrustPass” action. The action targets the supplied TrustPass domain and includes the current site location as a `returnTo` parameter for a safe post-login return path.
-
-## GitHub Pages readiness
-
-The public repository `Iconicice/icynigma-ai` now contains a dedicated `gh-pages` branch with the Pages-compatible static build and a `404.html` client-route fallback. The repository’s GitHub Pages setting is available in the authenticated web session and is configured to deploy from a branch; the final source selection requires a refreshed interaction with the settings control.
