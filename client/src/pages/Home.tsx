@@ -1,33 +1,11 @@
-import { useAuth } from "@/_core/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { About } from "@/components/About";
+import { AudioGuide } from "@/components/AudioGuide";
+import { Beats } from "@/components/Beats";
+import { Connect } from "@/components/Connect";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
+import { ImeAssistant } from "@/components/ImeAssistant";
+import { Navigation } from "@/components/Navigation";
+import { Services } from "@/components/Services";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
-export default function Home() {
-  // The useAuth hook provides authentication state.
-  // To implement login/logout, call logout(), or start login from an event
-  // handler: onClick={() => startLogin()} (imported from "@/const"). Never call
-  // startLogin() during render (no href={startLogin()}) — it mints a one-time
-  // nonce cookie and must run only at the moment of navigation.
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
-  );
-}
+export default function Home() { return <div className="min-h-screen bg-background text-foreground selection:bg-primary/30"><Navigation /><main><Hero /><Services /><Beats /><About /><Connect /></main><Footer /><AudioGuide /><ImeAssistant /></div>; }
