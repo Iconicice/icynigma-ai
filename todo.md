@@ -30,4 +30,5 @@
 - [x] Integrate IME TrustPass as the default login entry point with a secure return path to this site.
 - [x] Remove the IME TrustPass login redirect and restore the original site login behavior.
 - [x] Add a dedicated Icynigma AI page that directs visitors to the supplied general-purpose chatbot for open-ended questions.
-- [ ] Define and implement opt-in browser push notifications, including consent, subscription storage, owner delivery controls, and unsubscribe behavior.
+- [x] Browser push notifications were intentionally removed at the user’s request; no visitor subscription, delivery, or notification configuration is present.
+- [x] VAPID keys, subscriber data storage, service-worker, and owner notification-publishing work were intentionally removed at the user’s request.
