@@ -1,5 +1,5 @@
 /**
- * Production-hosted originals from the supplied Ice Media Entertainment source package.
+ * Production-hosted originals from the supplied Iconic Media Entertainment source package.
  * These paths are returned by managed asset storage and must not be replaced with placeholders.
  */
 export const siteAssets = {

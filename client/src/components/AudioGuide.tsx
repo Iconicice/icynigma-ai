@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignLeft, ChevronDown, ChevronUp, Headphones, Pause, Play, Square, Volume2, X } from "lucide-react";
 
 const SITE_SUMMARY = `
-Alright. Settle in. We are about to take a little tour of Ice Media Entertainment. Also known as... I.M.E. Yes, like the letter. Very clean. Very intentional. Very Ice.
+Alright. Settle in. We are about to take a little tour of Iconic Media Entertainment. Also known as... I.M.E. Yes, like the letter. Very clean. Very intentional. Very Iconic.
 
 So. What is I.M.E? Good question. We are a music production studio. But not just any studio. We are the kind of studio that plays the long game, while everyone else is out here chasing clout. Founded by Ice himself. COO. Artist. Forward thinker. The man does not rush. And honestly? Neither should you.
 
@@ -35,10 +35,10 @@ Our philosophy? We respect the old-school ways. We honour the craft. But we are 
 
 Ready to connect? You can find us on TikTok, Instagram, X, YouTube, SoundCloud, Beatstars, and Voloco. All the links are right there in the Connect section. Just scroll down and tap in.
 
-That is Ice Media Entertainment. I.M.E. And that... was your audio tour. You are welcome.`.trim();
+That is Iconic Media Entertainment. I.M.E. And that... was your audio tour. You are welcome.`.trim();
 
 const SECTIONS = [
-  { label: "Home", text: "Welcome to Ice Media Entertainment. I.M.E. Silent moves, loud results. We equip artists with the exact tools they need to make serious noise. And no, that is not a threat. It is a promise. A very calm, very deliberate promise." },
+  { label: "Home", text: "Welcome to Iconic Media Entertainment. I.M.E. Silent moves, loud results. We equip artists with the exact tools they need to make serious noise. And no, that is not a threat. It is a promise. A very calm, very deliberate promise." },
   { label: "Services", text: "Services. Three of them. First, Remote Production and Mixing. You send the vocals, we send back a masterpiece. You do not even have to put on shoes. Second, Custom I.M.E Beats. Original instrumentals, built for your vibe specifically. And third, On-Site Studio Recording. Which is currently on pause. Do not panic. It is upgrading. Like a software update, but for a whole studio. Good things take time." },
   { label: "Buy Beats", text: "Beats. Four of them. All original. All on Voloco. Fairies, for seventy-five Rand. Light and dreamy. Escape, for eighty-five Rand. Dark and atmospheric. Mystic, for one fifty. Deep and soulful. And then there is Abracadabra. Two hundred Rand. Our premium track. You say the name once and suddenly your whole creative life makes sense. Click any card to go straight to Voloco and grab it." },
   { label: "About", text: "The Architects of Tomorrow's Sound. Founded by Ice. COO. Artist. Forward thinker. The kind of person who plays chess while everyone else is playing checkers. At I.M.E, we respect where music comes from. The old school. The craft. The culture. But we are also building the future with our own hands. Feet on the ground. Eyes on the stars. Let us create something timeless. No pressure though." },

@@ -13,3 +13,9 @@ The original external destinations were checked with redirect-following HTTP req
 The live browser control check confirmed that the Icynigma.ai floating trigger opens the branded panel and exposes the minimize control, all five original FAQ chips, and the free-text input with its send action. The page’s initial blank browser capture was a refresh timing artifact; a subsequent browser inspection displayed the complete interactive page and all expected controls.
 
 The live FAQ action `How do I buy a beat?` returned a streamed 200 Server-Sent Events response from `/api/assistant/chat`; browser network diagnostics recorded the expected `text/event-stream` response without an error. The live AudioGuide trigger opened the full panel and exposed its Play Summary, Read Along, Read by Section, and all four speed controls. Both floating tools remained open and usable together without obscuring their respective controls.
+
+## Production deployment verification
+
+The public deployment at `https://icemediaent-kbysc8ud.manus.space` loaded the full Iconic Media Entertainment homepage successfully. The production page served the original managed logo, complete section sequence, Voloco and social controls, creator attribution, AudioGuide trigger, and Icynigma.ai trigger. Opening the assistant on the production domain displayed the branded panel, online state, welcome message, FAQ chips, and message input, confirming the deployed interactive shell is healthy.
+
+The updated site was inspected in the live browser after the rename. Its hero reads “Welcome to Iconic Media Entertainment” exactly, its document title is Iconic Media Entertainment, and the unauthenticated desktop navigation exposes the new “Log in with IME TrustPass” action. The action targets the supplied TrustPass domain and includes the current site location as a `returnTo` parameter for a safe post-login return path.
