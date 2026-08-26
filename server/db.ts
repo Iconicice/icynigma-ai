@@ -89,4 +89,11 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
+export async function updateUserAvatar(openId: string, avatarKey: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users).set({ avatarKey, avatarUpdatedAt: new Date() }).where(eq(users.openId, openId));
+  return getUserByOpenId(openId);
+}
+
 // TODO: add feature queries here as your schema grows.

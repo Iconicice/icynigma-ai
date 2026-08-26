@@ -20,9 +20,21 @@ export const users = mysqlTable("users", {
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
+  avatarKey: varchar("avatarKey", { length: 128 }),
+  avatarUpdatedAt: timestamp("avatarUpdatedAt"),
 });
 
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
+
+export const siteRotation = mysqlTable("siteRotation", {
+  id: int("id").primaryKey(),
+  quarterKey: varchar("quarterKey", { length: 16 }).notNull(),
+  catalogVersion: varchar("catalogVersion", { length: 32 }).notNull(),
+  scheduleCronTaskUid: varchar("scheduleCronTaskUid", { length: 65 }),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SiteRotation = typeof siteRotation.$inferSelect;
 
 // TODO: Add your tables here

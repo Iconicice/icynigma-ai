@@ -32,3 +32,19 @@
 - [x] Add a dedicated Icynigma AI page that directs visitors to the supplied general-purpose chatbot for open-ended questions.
 - [x] Browser push notifications were intentionally removed at the user’s request; no visitor subscription, delivery, or notification configuration is present.
 - [x] VAPID keys, subscriber data storage, service-worker, and owner notification-publishing work were intentionally removed at the user’s request.
+- [x] Complete the approved ElevenLabs AudioGuide TTS integration with browser fallback.
+- [x] Add eight aesthetic selectable avatars for new and existing users across two dark anime, two alien, two lost astronaut, and two robot/android styles.
+- [ ] Implement quarterly avatar rotation within the same categories with safe persistence for existing users.
+- [ ] Run the complete test, accessibility, responsive, and production verification pass for TTS and avatars.
+- [ ] Publish the completed TTS and avatar update to the managed site and synchronized repository/deployment sources.
+- [x] Add generated quarterly avatar catalog and accessible avatar picker UI.
+- [x] Persist authenticated user avatar selection and restore it on login.
+- [x] Add quarterly avatar rotation metadata and safe fallback behavior.
+- [x] Implement ElevenLabs AudioGuide playback with browser speech fallback.
+- [x] Add Vitest coverage for avatar catalog, quarter selection, and TTS fallback behavior.
+- [ ] Run typecheck, tests, build, visual verification, and save/publish final checkpoint.
+- [ ] Produce completion explanation PDF and multi-LLM project handoff file.
+- [ ] Push final source changes to GitHub repository.
+- [x] Fix AudioGuide read-along progress and robust audio error fallback.
+- [ ] Add server-side scheduled rotation callback and create the production quarterly Heartbeat after deployment.
+- [ ] Add TTS endpoint and client fallback tests; verify production-domain audio/avatar routes and accessibility.
