@@ -10,10 +10,10 @@
 - [x] Rebuild the floating streaming chat widget with original FAQ chips, branded exactly as Icynigma.ai and preloaded with complete I.M.E. site context.
 - [x] Display the exact creator credit “Inolofatseng Mokgoko” in the Footer and site metadata.
 - [x] Preserve the original favicon, Open Graph image, robots.txt, and SEO metadata without modification.
-- [ ] Add production build configuration and a GitHub Pages deployment workflow.
+- [x] Add production build configuration and a GitHub Pages deployment workflow; GitHub Pages is active through the existing `gh-pages` branch deployment. The workflow is prepared locally but GitHub rejected publishing it because the connected token lacks workflow permission.
 - [x] Write and run Vitest coverage for site context, assistant configuration, and production URL routing.
 - [x] Verify desktop and mobile visual fidelity, all routes, media, assistant behavior, and production build output.
-- [ ] Create a private GitHub repository, push the completed source, and enable GitHub Pages.
+- [x] Synchronize the completed source to `https://github.com/Iconicice/icynigma-ai` and confirm GitHub Pages is enabled at `https://iconicice.github.io/icynigma-ai/`.
 - [x] Resolve the Navigation and Services motion type errors and confirm a clean TypeScript check.
 - [x] Restore the complete original global style-token system from the supplied source and validate its dark-mode fidelity.
 - [x] Verify the AudioGuide and `/video` route within a clean production build before final delivery.
@@ -24,7 +24,7 @@
 - [x] Diagnose and resolve runtime, browser-console, network, build, and interaction issues found during the optimization pass.
 - [x] Validate production performance and responsive visual behavior after fixes.
 - [x] Verify the deployed production domain, core routes, asset delivery, and assistant endpoint health.
-- [ ] Retry GitHub Pages enablement and workflow publication using the available autonomous account access.
+- [x] Retry GitHub Pages enablement and confirm the published branch deployment is built.
 - [x] Replace every website, metadata, assistant, video, documentation, test, and deployment-facing occurrence of “Ice Media Entertainment” with “Iconic Media Entertainment”.
 - [x] Update the landing-page hero to read “Welcome to Iconic Media Entertainment” exactly.
 - [x] Integrate IME TrustPass as the default login entry point with a secure return path to this site.
@@ -32,3 +32,19 @@
 - [x] Add a dedicated Icynigma AI page that directs visitors to the supplied general-purpose chatbot for open-ended questions.
 - [x] Browser push notifications were intentionally removed at the user’s request; no visitor subscription, delivery, or notification configuration is present.
 - [x] VAPID keys, subscriber data storage, service-worker, and owner notification-publishing work were intentionally removed at the user’s request.
+- [x] Complete the approved ElevenLabs AudioGuide TTS integration with browser fallback.
+- [x] Add eight aesthetic selectable avatars for new and existing users across two dark anime, two alien, two lost astronaut, and two robot/android styles.
+- [x] Implement quarterly avatar rotation within the same categories with safe persistence for existing users; callback and production Heartbeat are active.
+- [x] Run the complete test, accessibility, responsive, and production verification pass for TTS and avatars.
+- [x] Publish the completed TTS and avatar update to the managed site and synchronized repository/deployment sources.
+- [x] Add generated quarterly avatar catalog and accessible avatar picker UI.
+- [x] Persist authenticated user avatar selection and restore it on login.
+- [x] Add quarterly avatar rotation metadata and safe fallback behavior.
+- [x] Implement ElevenLabs AudioGuide playback with browser speech fallback.
+- [x] Add Vitest coverage for avatar catalog, quarter selection, TTS endpoint, and AudioGuide browser fallback behavior.
+- [x] Run typecheck, tests, build, visual verification, and save/publish final checkpoint.
+- [x] Produce completion explanation PDF and multi-LLM project handoff file.
+- [x] Push final source changes to GitHub repository.
+- [x] Fix AudioGuide read-along progress and robust audio error fallback.
+- [x] Add server-side scheduled rotation callback and create the production quarterly Heartbeat after deployment.
+- [x] Add TTS endpoint and client fallback tests; verify production-domain audio/avatar routes and accessibility.

@@ -2,7 +2,7 @@
 
 ## Identity and constraints
 
-The site name is **Iconic Media Entertainment** and must be used exclusively. Credit **Inolofatseng Mokgoko** on site-facing and project-facing materials. Do not reintroduce the former site name. Preserve the original dark-mode aesthetic, animated centre logo, supplied media, AudioGuide narration, floating Icynigma.ai assistant, `/video` route, original login behavior, and existing production domain.
+The site name is **Iconic Media Entertainment** and must be used exclusively. Credit **Inolofatseng Mokgoko** on site-facing and project-facing materials. Preserve the original dark-mode aesthetic, animated centre logo, supplied media, AudioGuide narration, floating Icynigma.ai assistant, `/video` route, original login behavior, and existing production domain.
 
 ## Stack
 
@@ -31,11 +31,11 @@ Quarter selection is UTC-based. `getQuarterKey()` uses calendar quarters, and `g
 
 ## Verification commands
 
-Use `pnpm run check` for TypeScript validation, `pnpm test -- --run` for Vitest, and `pnpm run build` for the production bundle. Current verified results are TypeScript clean, 10 Vitest files passing with 16 tests, and a successful Vite plus esbuild production build. The deployed domain returned `200` for `/` and `/avatars`, `400` for invalid TTS input, and `403` for unauthenticated rotation calls.
+Use `pnpm run check` for TypeScript validation, `pnpm test -- --run` for Vitest, and `pnpm run build` for the production bundle. The recovered stable tree is TypeScript-clean, has 10 passing Vitest files with 16 tests, and produces a successful Vite plus esbuild production build. The deployed domain returned `200` for `/` and `/avatars`, `400` for invalid TTS input, and `403` for unauthenticated rotation calls.
 
 ## Current release
 
-The stable deployed checkpoint is `7845315e`. The source repository target remains `https://github.com/Iconicice/icynigma-ai`. GitHub Pages workflow work is still a separate legacy checklist item and may require repository Pages permissions; managed hosting is the canonical production deployment.
+The managed deployment checkpoint is `7845315e`. The source repository is `https://github.com/Iconicice/icynigma-ai`, and GitHub Pages is active at `https://iconicice.github.io/icynigma-ai/`. A Pages Actions workflow is prepared locally; GitHub rejected publishing that workflow because the connected GitHub App token lacks the `workflows` permission. The existing `gh-pages` branch deployment remains active.
 
 ## Maintenance cautions
 

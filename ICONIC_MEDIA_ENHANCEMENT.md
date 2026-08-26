@@ -36,7 +36,7 @@ The final local verification includes a clean TypeScript check, a production bui
 
 ## Notes for future avatar drops
 
-The current catalog is intentionally centralized in `client/src/lib/avatarCatalog.ts`. Future quarterly visual drops should replace or extend the asset URLs in that manifest, update `AVATAR_CATALOG_VERSION`, and preserve the eight-key category contract unless a schema migration is deliberately planned. Existing users retain saved choices; new users receive the quarter-aware default.
+The current catalog is centralized in `client/src/lib/avatarCatalog.ts`. Future quarterly visual drops should replace or extend the asset URLs in that manifest, update `AVATAR_CATALOG_VERSION`, and preserve the eight-key category contract unless a schema migration is deliberately planned. Existing users retain saved choices; new users receive the quarter-aware default.
 
 ## References
 
