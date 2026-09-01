@@ -3,11 +3,11 @@ import { eq } from "drizzle-orm";
 import { getDb } from "./db";
 import { siteRotation } from "../drizzle/schema";
 import { sdk } from "./_core/sdk";
+import { getCurrentAvatarSet } from "../client/src/lib/avatarCatalog";
 
 function currentRotation() {
-  const now = new Date();
-  const quarter = Math.floor(now.getUTCMonth() / 3) + 1;
-  return { quarterKey: `${now.getUTCFullYear()}-Q${quarter}`, catalogVersion: `${now.getUTCFullYear()}-Q${quarter}` };
+  const active = getCurrentAvatarSet(new Date());
+  return { quarterKey: active.quarter, catalogVersion: active.version };
 }
 
 export function registerAvatarRotationRoute(app: Express) {
