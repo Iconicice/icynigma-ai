@@ -48,6 +48,7 @@
 - [x] Fix AudioGuide read-along progress and robust audio error fallback.
 - [x] Add server-side scheduled rotation callback and create the production quarterly Heartbeat after deployment.
 - [x] Add TTS endpoint and client fallback tests; verify production-domain audio/avatar routes and accessibility.
+- [x] Fix root-page SEO title to 30–60 characters and add 3–8 focused meta keywords.
 - [x] Audit current production code, dependencies, routes, logs, and assistant context for upgrade opportunities; findings recorded in `autonomous-audit.md`.
 - [x] Upgrade the site-aware assistant context and streaming UX without changing Iconic Media Entertainment branding or creator credit.
 - [x] Apply reliability, accessibility, performance, and responsive improvements identified by the audit.

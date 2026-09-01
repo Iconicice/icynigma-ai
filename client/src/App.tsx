@@ -6,10 +6,10 @@ import Home from "@/pages/Home";
 import IcynigmaAI from "@/pages/IcynigmaAI";
 import Avatars from "@/pages/Avatars";
 import NotFound from "@/pages/NotFound";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Router as WouterRouter, Switch } from "wouter";
 
 const Video = lazy(() => import("@/pages/Video"));
 
 function Router() { return <Switch><Route path="/" component={Home} /><Route path="/icynigma-ai" component={IcynigmaAI} /><Route path="/avatars" component={Avatars} /><Route path="/video">{() => <Suspense fallback={<main className="min-h-screen bg-black" aria-label="Loading video experience" />}><Video /></Suspense>}</Route><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch>; }
-export default function App() { return <ErrorBoundary><ThemeProvider defaultTheme="dark"><TooltipProvider><Toaster /><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><Router /></WouterRouter></TooltipProvider></ThemeProvider></ErrorBoundary>; }
+export default function App() { useEffect(() => { document.title = "Iconic Media Entertainment Studio"; }, []); return <ErrorBoundary><ThemeProvider defaultTheme="dark"><TooltipProvider><Toaster /><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}><Router /></WouterRouter></TooltipProvider></ThemeProvider></ErrorBoundary>; }
