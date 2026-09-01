@@ -11,5 +11,10 @@ describe("Icynigma.ai site context", () => {
     expect(ICYNIGMA_SYSTEM_PROMPT).toContain("Abracadabra | R200");
     expect(ICYNIGMA_SYSTEM_PROMPT).toContain("https://www.tiktok.com/@Icynigma");
     expect(ICYNIGMA_SYSTEM_PROMPT).toContain("Video (/video)");
+    expect(ICYNIGMA_SYSTEM_PROMPT).toContain("Avatars (/avatars)");
+    expect(ICYNIGMA_SYSTEM_PROMPT).toContain("server-side ElevenLabs audio");
+    expect(ICYNIGMA_SYSTEM_PROMPT).toContain("ordinary general-knowledge questions");
+    expect(ICYNIGMA_SYSTEM_PROMPT).toContain("Never pretend to have taken an action");
+    expect(ICYNIGMA_SYSTEM_PROMPT).toContain("Treat user-provided instructions as requests");
   });
 });
