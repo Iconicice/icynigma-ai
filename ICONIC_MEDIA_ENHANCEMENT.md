@@ -2,18 +2,21 @@
 
 **Creator credit:** Inolofatseng Mokgoko  
 **Project:** Iconic Media Entertainment  
-**Release checkpoint:** `7845315e`  
-**Production domain:** https://icemediaent-kbysc8ud.manus.space
+**Latest release checkpoint:** `c9a1fc2`  
+**Managed production domain:** https://icemediaent-kbysc8ud.manus.space  
+**GitHub Pages:** https://iconicice.github.io/icynigma-ai/
 
 ## Summary
 
-This release extends the faithful Iconic Media Entertainment rebuild with a server-side ElevenLabs voice path for the existing AudioGuide, a browser speech fallback, and a new responsive avatar studio at `/avatars`. The implementation preserves the existing dark visual language, animated logo treatment, original navigation, site assistant, media routes, and creator credit.
+This release extends the faithful Iconic Media Entertainment rebuild with a server-side ElevenLabs voice path for the existing AudioGuide, a browser speech fallback, a responsive avatar studio at `/avatars`, a site-aware Icynigma.ai assistant, and strict SEO/social metadata. The implementation preserves the original dark visual language, animated logo treatment, original navigation, supplied media, media routes, login behavior, and creator credit.
 
-The AudioGuide posts narration text to `/api/tts`. The API key remains server-side, the endpoint bounds input to 5,000 characters, returns `audio/mpeg` bytes on success, and normalizes upstream failures to a safe `502` response. The browser first attempts ElevenLabs playback. If the request or audio playback fails, the component uses `speechSynthesis`; pause, resume, stop, and read-along behavior remain available. Read-along progress follows browser speech boundaries or the audio element’s current-time ratio.
+The AudioGuide posts narration text to `/api/tts`. The API key remains server-side, the endpoint bounds input to 5,000 characters, returns `audio/mpeg` bytes on success, and normalizes upstream failures to a safe `502` response. The browser first attempts ElevenLabs playback. If the request or audio playback fails, the component uses `speechSynthesis`; pause, resume, stop, and read-along behavior remain available.
 
-The avatar studio contains eight original generated profile assets in four categories: two dark anime, two alien, two lost astronaut, and two robot/android. Visitors can preview and locally retain a selection. Authenticated users save the validated avatar key to the `users.avatarKey` field and restore it after login. Unknown saved keys resolve to the first safe catalog entry in the client, while the server mutation accepts only the eight catalog keys.
+The avatar studio contains eight original generated profile assets in four categories: two dark anime, two alien, two lost astronaut, and two robot/android. Visitors can preview and locally retain a selection. Authenticated users save the validated avatar key to `users.avatarKey` and restore it after login. Quarter rotation is represented by UTC helpers and durable `siteRotation` state; the production Heartbeat `iconic-media-quarterly-avatar-rotation` runs at `0 0 0 1 1,4,7,10 *` UTC.
 
-Quarter rotation is represented by UTC quarter helpers and durable `siteRotation` state. The `/api/scheduled/avatar-rotation` callback authenticates cron identities, records the active quarter and catalog version, persists the task UID, and is idempotent. A production Heartbeat named `iconic-media-quarterly-avatar-rotation` runs at `0 0 0 1 1,4,7,10 *` UTC.
+## SEO and social metadata
+
+The root page now uses the document title `Iconic Media Entertainment Studio` (35 characters), six focused meta keywords, an updated description, and complete Open Graph/Twitter card metadata. Regression coverage enforces the strict title and keyword limits.
 
 ## Implementation map
 
@@ -21,18 +24,22 @@ Quarter rotation is represented by UTC quarter helpers and durable `siteRotation
 |---|---|
 | ElevenLabs voice | `server/tts.ts`, mounted from `server/_core/index.ts` |
 | Browser fallback | `client/src/components/AudioGuide.tsx` |
+| Icynigma assistant | `client/src/components/ImeAssistant.tsx` |
 | Avatar catalog | `client/src/lib/avatarCatalog.ts` |
 | Avatar picker | `client/src/pages/Avatars.tsx` |
 | Avatar route | `/avatars` in `client/src/App.tsx` |
 | Profile persistence | `profile.avatar` and `profile.setAvatar` in `server/routers.ts` |
-| User fields | `users.avatarKey`, `users.avatarUpdatedAt` |
 | Rotation state | `siteRotation` table and `server/avatarRotation.ts` |
 | Scheduled callback | `/api/scheduled/avatar-rotation` |
-| Tests | `server/avatar-catalog.test.ts`, `server/tts.test.ts`, `client/src/components/AudioGuide.test.tsx` |
+| Tests | Avatar, TTS, AudioGuide, assistant, interaction, and metadata regression tests |
 
 ## Verification
 
-The final local verification includes a clean TypeScript check, a production build, and a passing Vitest suite with 10 test files and 16 tests. The deployed domain returned `200` for `/` and `/avatars`, `400` for invalid `/api/tts` input, and `403` for an unauthenticated direct rotation callback, confirming the expected route protections. Desktop and mobile screenshots confirmed the responsive avatar grid, category filters, selected state, and readable mobile stacking.
+The latest local verification includes a clean TypeScript check, a successful production build, and 18 passing Vitest tests. The managed domain previously returned `200` for `/` and `/avatars`, `400` for invalid `/api/tts` input, and `403` for an unauthenticated direct rotation callback.
+
+## Custom-domain status
+
+The intended custom domains are `icynigma.co.za` and `www.icynigma.co.za`. A public DNS check on 2026-10-02 found both names resolving to `157.90.205.139`, with no visible CNAME to `cname.manus.space`; HTTPS requests failed with `SSL_ERROR_SYSCALL`. The custom domain therefore remains pending registrar/Manus DNS binding and certificate provisioning. The managed `*.manus.space` deployment and GitHub Pages mirror remain available.
 
 ## Notes for future avatar drops
 
@@ -40,5 +47,5 @@ The current catalog is centralized in `client/src/lib/avatarCatalog.ts`. Future 
 
 ## References
 
-[1]: https://elevenlabs.io/docs/api-reference/text-to-speech "ElevenLabs Text to Speech API reference"
+[1]: https://elevenlabs.io/docs/api-reference/text-to-speech "ElevenLabs Text to Speech API reference"  
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis "MDN SpeechSynthesis API reference"

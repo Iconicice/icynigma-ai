@@ -49,8 +49,12 @@
 - [x] Add server-side scheduled rotation callback and create the production quarterly Heartbeat after deployment.
 - [x] Add TTS endpoint and client fallback tests; verify production-domain audio/avatar routes and accessibility.
 - [x] Fix root-page SEO title to 30–60 characters and add 3–8 focused meta keywords.
+- [x] Implement complete Open Graph and Twitter/X social-sharing metadata with a canonical share image.
 - [x] Audit current production code, dependencies, routes, logs, and assistant context for upgrade opportunities; findings recorded in `autonomous-audit.md`.
 - [x] Upgrade the site-aware assistant context and streaming UX without changing Iconic Media Entertainment branding or creator credit.
 - [x] Apply reliability, accessibility, performance, and responsive improvements identified by the audit.
 - [x] Run full typecheck, tests, production build, live-route checks, and visual verification; fix regressions.
 - [x] Save and publish the autonomous upgrade checkpoint and synchronize GitHub state.
+- [ ] Correct or remove the Open Graph image MIME declaration, recheck public headers, and align social metadata tests with the live asset contract.
+- [ ] Connect `icynigma.co.za` to the live Iconic Media Entertainment deployment and verify HTTPS and routing.
+- [ ] Complete Manus custom-domain binding for `icynigma.co.za`; Domains.co.za shows the root and `www` CNAME records, but public resolvers still return the registrar parking A record `157.90.205.139` and HTTPS is not live.

@@ -31,11 +31,15 @@ Quarter selection is UTC-based. `getQuarterKey()` uses calendar quarters, and `g
 
 ## Verification commands
 
-Use `pnpm run check` for TypeScript validation, `pnpm test -- --run` for Vitest, and `pnpm run build` for the production bundle. The recovered stable tree is TypeScript-clean, has 10 passing Vitest files with 16 tests, and produces a successful Vite plus esbuild production build. The deployed domain returned `200` for `/` and `/avatars`, `400` for invalid TTS input, and `403` for unauthenticated rotation calls.
+Use `pnpm run check` for TypeScript validation, `pnpm test -- --run` for Vitest, and `pnpm run build` for the production bundle. The latest release passed the TypeScript check, 18 Vitest tests, and the production build. The deployed Manus domain previously returned `200` for `/` and `/avatars`, `400` for invalid TTS input, and `403` for unauthenticated rotation calls.
 
 ## Current release
 
-The managed deployment checkpoint is `7845315e`. The source repository is `https://github.com/Iconicice/icynigma-ai`, and GitHub Pages is active at `https://iconicice.github.io/icynigma-ai/`. A Pages Actions workflow is prepared locally; GitHub rejected publishing that workflow because the connected GitHub App token lacks the `workflows` permission. The existing `gh-pages` branch deployment remains active.
+The latest managed deployment checkpoint is `c9a1fc2`. It includes the SEO correction for `/`: `Iconic Media Entertainment Studio` (35 characters), six focused meta keywords, updated description copy, and regression coverage for the strict title/keyword limits. The source repository is `https://github.com/Iconicice/icynigma-ai`, and GitHub Pages is active at `https://iconicice.github.io/icynigma-ai/`. A Pages Actions workflow is prepared locally; GitHub rejected publishing that workflow because the connected GitHub App token lacks the `workflows` permission. The existing `gh-pages` branch deployment remains active.
+
+## Custom-domain status (verified 2026-10-02)
+
+The intended custom domains are `icynigma.co.za` and `www.icynigma.co.za`. Public DNS currently returns `157.90.205.139` for both names, with no visible CNAME to `cname.manus.space`. HTTPS requests to both names fail with `SSL_ERROR_SYSCALL`, so the Manus hosting-side binding and/or registrar DNS records are not live yet. The Manus deployment remains reachable through its managed `*.manus.space` hostname until the DNS records point to the Manus target and Manus provisions certificates.
 
 ## Maintenance cautions
 
